@@ -1,47 +1,100 @@
+
+/* ------ Google font ------  */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* ------ Color Variables ------ */
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --dark-orange: hsl(25, 92%, 44%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 23%, 78%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --black:hsl(0, 100%, 0%);
+}
 body {
-  background-color: hsl(216, 12%, 8%);
+  background-color: var(--black);
   color: white;
-}
-
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  /*for Center of Screen*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* width: 100vw;*/
+  margin: 0;
+} 
+/* ------ container ------ */
 .container {
-  background-color: hsl(213, 19%, 18%);
-  border-radius: 15%;
-  width: 30%;
+  background-color: var(--very-dark-blue);
+  border-radius: 8%;
+  width: 20%;
   height: auto;
+  line-height: 1.5em;
+  padding: 2%;
 }
-
-
-
-/* CSS */
-button {
-  appearance: none;
-  background-color: #ffffff;
-  border-radius: 40em;
+.container svg {
+  margin: 20px;
+}
+.container p {
+  color: var(--light-grey);
+}
+/* ------ Number Button Hovering ------ */
+.round-button button{
+  background-color: var(--dark-blue);
+  color: var(--light-grey);
+  border-radius: 100%;
+  /* box-sizing: border-box; */
   border-style: none;
-  box-shadow: #adcfff 0 -12px 6px inset;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: -0.24px;
-  margin: 0;
-  outline: none;
-  padding: 1rem 1.3rem;
-  quotes: auto;
   text-align: center;
-  text-decoration: none;
-  transition: all 0.15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  padding: 10px;
+  width: 2.3em;
+  cursor: pointer;
+  margin: 2rem 0.5rem;
+
+}
+.round-button button:hover {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+.round-button button:active {
+  background-color: var(--orange);
+}
+/* ------ Submit Button Hovering ------ */
+.submit-button {
+  width: 100%;
+  /* appearance: none; */
+  background-color: var(--orange);
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: var(--dark-orange) 0 -12px 6px inset;
+  /* box-sizing: border-box; */
+  color: var(--white);
+  cursor: pointer;
+  /* display: inline-block; */
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  /* outline: none; */
+  /* padding: 1rem 1.3rem; */
+  padding: 0.7rem 3rem;
+  /* quotes: auto; */
+  text-align: center;
+  /* align-items: center; */
+  margin-bottom: 1rem;;
+  /* text-decoration: none; */
+  /* transition: all 0.15s; */
+  /* touch-action: manipulation; */
 }
 
-button:hover {
-  background-color: #ffc229;
-  box-shadow: #ff6314 0 -6px 8px inset;
+.submit-button:hover {
+  background-color: var(--white);
+  box-shadow: inset 0 -6px 8px var(--dark-orange);   /*inset | offset-x | offset-y | blur-radius | color*/
+  color: var(--orange);
   transform: scale(1.125);
 }
 
@@ -50,15 +103,19 @@ button:active {
 }
 
 @media (min-width: 768px) {
-  .button-73 {
-    font-size: 1.5rem;
-    padding: 0.75rem 2rem;
+  .container {
+    display: flexbox;
+    /* flex-direction: column; */
+    /* margin: 50% auto 20%; */
+      /* font-size: 1rem;
+      padding: 0.75rem 2rem; */
   }
 }
+
 .attribution {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228, 65%, 65%);
 }
